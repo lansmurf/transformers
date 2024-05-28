@@ -1233,8 +1233,8 @@ class SamModel(SamPreTrainedModel):
             output_hidden_states=output_hidden_states,
             return_dict=return_dict,
         )
-        image_embeddings = vision_output[0]
-        return image_embeddings
+
+        return vision_output
 
     @torch.no_grad()
     def get_prompt_embeddings(
